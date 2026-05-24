@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💌 Private support (billing, refunds, license keys)
+    url: https://battery-sensei.app/#contact
+    about: Anything that involves your email, payment, or account belongs here, not in a public issue.
+  - name: 🔒 Security disclosure
+    url: mailto:sandro@schaier.io
+    about: Found a security issue? Please email sandro@schaier.io directly. Do not open a public issue.
+  - name: 📖 FAQ and docs
+    url: https://battery-sensei.app/#faq
+    about: Many questions are already answered on the site.

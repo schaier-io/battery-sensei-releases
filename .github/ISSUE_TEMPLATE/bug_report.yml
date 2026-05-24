@@ -1,0 +1,100 @@
+name: 🐞 Bug report
+description: Something is broken, crashes, or behaves wrong.
+title: "[Bug] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. A few specifics up front
+        usually mean the fix ships in the next point release, often within the week.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear, one or two sentence description of the bug.
+      placeholder: "Sensei shows 0 watts in/out while the MacBook is charging from a USB-C hub."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: "Watts in should show ~30W (the hub's PD profile)."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The shorter the better.
+      placeholder: |
+        1. Open Sensei
+        2. Plug in via the CalDigit TS4 hub
+        3. Open the menu bar tile
+        4. Notice the 0W reading
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Battery Sensei version
+      description: Find it in the menu bar tile → About, or in System Settings → General → About this Mac → Battery Sensei.
+      placeholder: "1.4.2"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: macos
+    attributes:
+      label: macOS version
+      options:
+        - macOS 13 Ventura
+        - macOS 14 Sonoma
+        - macOS 15 Sequoia
+        - macOS 26 (beta or newer)
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: chip
+    attributes:
+      label: Mac model family
+      options:
+        - Apple Silicon (M1)
+        - Apple Silicon (M2)
+        - Apple Silicon (M3)
+        - Apple Silicon (M4)
+        - Apple Silicon (M5 or newer)
+        - Intel MacBook
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Anything else?
+      description: |
+        Screenshots, screen recordings, console output, the contents of the menu bar tile, or whatever else made the bug visible. Drag files in.
+        Do not paste your license key here — this is a public issue.
+      placeholder: "Screenshot, console log, anything that helps."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched [existing issues](https://github.com/schaier-io/battery-sensei-releases/issues?q=is%3Aissue) and this is not a duplicate.
+          required: true
+        - label: I am running the latest version (or I noted my older version above and a reason I can't upgrade).
+          required: true
+        - label: I am not pasting my license key, email, or anything private into this public issue.
+          required: true

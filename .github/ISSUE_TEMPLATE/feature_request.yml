@@ -1,0 +1,60 @@
+name: 💡 Feature request
+description: Suggest an addition or change to Battery Sensei.
+title: "[Feature] "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Battery Sensei tries to do one thing calmly. Most feature requests that
+        ship are the ones that take something already in the app and make it
+        quieter, more accurate, or easier to ignore until it matters. That's the
+        bar. If your idea fits, the framing below makes it easy to say yes.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is the problem you are trying to solve?
+      description: Start with the situation, not the solution. What were you doing when you wished Sensei did something it didn't?
+      placeholder: "Before flying, I want to top up to 100% but I always forget to flip off the charge limit the night before."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like Sensei to do?
+      placeholder: "A 'Travel tomorrow' toggle that schedules Travel Mode to start at a given hour overnight."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What do you do today instead?
+      description: Helpful for understanding the workaround tax.
+      placeholder: "I set a calendar reminder the night before and manually toggle Travel Mode."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Should this be in the free tier or Premium?
+      description: A gut check, no commitment. Free essentials stay essentials; Premium covers depth and edge-case workflows.
+      options:
+        - Free essentials
+        - Premium
+        - Not sure
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I searched [existing requests](https://github.com/schaier-io/battery-sensei-releases/issues?q=is%3Aissue+label%3Aenhancement) and this is not a duplicate (if it is, I'll 👍 the existing one instead).
+          required: true
+        - label: This is a feature request, not a bug. (Bugs go in the bug template — easier to triage.)
+          required: true
